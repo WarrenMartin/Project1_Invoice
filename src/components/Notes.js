@@ -1,12 +1,16 @@
-export default function Notes(){
+
+
+export default function Notes({notes})  {
+  
     return (
         <>
 
 
-        <section className="mb-5">
-          {/* Textarea */}
-          <p>Notes to the clients ....</p>
-        </section>
+      <section className="mt-10 mb-5">
+        <h3>Additional notes</h3>
+        {/* not working lec 2  */}
+        <p className="lg:w-1/2 text-justify">{notes}</p>
+      </section>
 
       
 
