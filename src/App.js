@@ -1,3 +1,5 @@
+import Footer from "./components/Footer";
+import Notes from "./components/Notes";
 
 function App() {
   const handlePrint =() => {
@@ -59,24 +61,10 @@ function App() {
 
         {/* End of Dates */}
 
-        {/* Tables */}
+       
+        <Notes></Notes>
 
-        <div className="my-5">
-          this is the table
-        </div>
-
-        {/* End of table */}
-
-        {/* notes */}
-
-        <section className="mb-5">
-          {/* Textarea */}
-          <p>Notes to the clients ....</p>
-        </section>
-
-        {/* End of notes  */}
-
-        
+        <Footer></Footer>
        
 
       </main>
