@@ -62,7 +62,14 @@ function App() {
        <Dates invoiceNumber={invoiceNumber} invoiceDate={invoiceDate} dueDate={dueDate} />
 
       
-       <Table description={description} quantity={quantity} price={price} amount={amount} />
+       <Table
+        description={description} 
+        quantity={quantity}
+         price={price} 
+         amount={amount}
+         list={list}
+         setList={setList}
+          />
 
         <Notes notes={notes}></Notes>
 
@@ -276,6 +283,8 @@ function App() {
           setPrice={setPrice}
           amount={amount} 
           setAmount={setAmount}
+          list={list}
+          setList={setList}
           />
         </article>
       

@@ -1,7 +1,27 @@
-import { useEffect } from "react"
+import React, { useEffect } from "react"
+import {v4 as uuidv4} from "uuid"
 
-export default function TableForm({description,setDescription,quantity,setQuantity,price,setPrice,amount,setAmount
+export default function TableForm({description,setDescription,quantity,setQuantity,price,setPrice,amount,setAmount,list,setList
 }){
+
+    const handleSubmit=(e) =>{
+        e.preventDefault();
+
+        const newItems={
+            id:uuidv4(),
+            description,
+            quantity,
+            price,
+            amount:amount
+        }
+        setDescription("")
+        setQuantity("")
+        setPrice("")
+        setAmount("")
+        setList([...list,newItems])
+
+
+    }
 
     useEffect(() => {
         const calculateAmount=(amount) => {
@@ -12,7 +32,7 @@ export default function TableForm({description,setDescription,quantity,setQuanti
 
     return (
         <>
-
+        <form onSubmit={handleSubmit} >
         <div className="flex flex-col md:mt-16">
         <label htmlFor="description">Item description</label>
         <input type="text" 
@@ -54,6 +74,41 @@ export default function TableForm({description,setDescription,quantity,setQuanti
             
             </div>
         </div>
+        <button type="submit" className="mb-5 bg-blue-500  text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">Add Table Item</button>
+
+        </form>      
+
+        {/* Table item  */}
+        
+
+        <table width="100%" className="mb-10">
+
+        <thead>
+             <tr className="bg-gray-100 p-1 ">
+                 <td className="font-bold">Description</td>
+                 <td className="font-bold">Quantity</td>
+                 <td className="font-bold">Price</td>
+                 <td className="font-bold">Amount</td>
+             </tr>
+         </thead>
+            
+          {list.map(({id,description,quantity,price,amount}) =>(
+             <React.Fragment key={id}>
+           
+         
+         <tbody>
+             <tr>
+                 <td>{description}</td>
+                 <td>{quantity}</td>
+                 <td>{price}</td>
+                 <td>{amount}</td>
+             </tr>
+         </tbody>
+             </React.Fragment>
+         
+          ) )}  
+          </table>
+        
 
 
         </>
