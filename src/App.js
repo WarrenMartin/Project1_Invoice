@@ -12,31 +12,31 @@ function App() {
 
   const [showInvoice,setShowInvoice]=useState(true)
 
-  const [name,setName]= useState("Warren Martin")
+  const [name,setName]= useState("")
 
-  const [address,setAddress]= useState("Martin Corner")
+  const [address,setAddress]= useState("")
 
-  const [email,setEmail]= useState("martin@gmail.com")
+  const [email,setEmail]= useState("")
 
-  const [phone,setPhone]= useState("123-456-789")
+  const [phone,setPhone]= useState("")
 
-  const [bankName,setBankName]= useState("Dash Bank")
+  const [bankName,setBankName]= useState("")
 
-  const [bankAccount,setBankAccount]= useState("1234567")
+  const [bankAccount,setBankAccount]= useState("")
 
-  const [website,setWebsite]= useState("www.warren.com")
+  const [website,setWebsite]= useState("")
 
-  const [clientName,setClientName]= useState("Calangute")
+  const [clientName,setClientName]= useState("")
 
-  const [clientAddress,setClientAddress]= useState("calangute")
+  const [clientAddress,setClientAddress]= useState("")
 
-  const [invoiceNumber,setInvoiceNumber]= useState("so123")
+  const [invoiceNumber,setInvoiceNumber]= useState("")
 
-  const [invoiceDate,setInvoiceDate]= useState("2/2/2022")
+  const [invoiceDate,setInvoiceDate]= useState("")
 
-  const [dueDate,setDueDate]= useState("3/2/2022")
+  const [dueDate,setDueDate]= useState("")
 
-  const [notes,setNotes]= useState("somehin somethin")
+  const [notes,setNotes]= useState("")
 
   const [description,setDescription]=useState("")
   const [quantity,setQuantity]=useState("")
